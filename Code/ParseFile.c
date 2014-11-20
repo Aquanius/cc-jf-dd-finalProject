@@ -78,7 +78,6 @@ void ParseFile(char * Filename)
 	}
 	// Close file
 	// ----------
-	printf("tester");
 	fclose(traceFile);
 	return;
 }
@@ -88,12 +87,12 @@ void ParseHexAddress(char * HexAddress)
 	unsigned long long mini = 0;
 	unsigned int tag = 0;
 	unsigned int index = 0;
-	_set_printf_count_output(1);
+	//_set_printf_count_output(1);
 	sscanf(HexAddress, "%x", &mini);
-	printf("Mini: %ul\n", mini);
+	//printf("Mini: %ul\n", mini);
 	ParseAddress(&mini, &index, &tag);
-	printf("\n%d, %d", index, tag);
-	printf("\n%x, %x\n", index, tag);
+	//printf("\n%d, %d", index, tag);
+	//printf("\n%x, %x\n", index, tag);
 	//e = (int)strtol(HexAddress, NULL, 16); Another way to convert to Decimal from Hex.
 	//sprintf(holder, "%x", mini);  If we need to print the hex value and save it.
 	return;
